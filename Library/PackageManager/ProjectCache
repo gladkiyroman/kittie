@@ -5,16 +5,26 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 637722629416290911
     m_Hash: 614556621
+=======
+      ticks: 637722624293952563
+    m_Hash: 560766747
+>>>>>>> Stashed changes
   m_LockFileStatus:
     m_FilePath: D:/Unity Projects/Catrunner/Catrunner/Repository/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
+<<<<<<< Updated upstream
       ticks: 637722629416300904
     m_Hash: 3244131502
+=======
+      ticks: 637722624293952563
+    m_Hash: 2352718243
+>>>>>>> Stashed changes
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
