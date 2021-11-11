@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9142743354191422126}
   - component: {fileID: 4880720625270610949}
   - component: {fileID: 6871184164002246912}
+  - component: {fileID: 725941074287651538}
   m_Layer: 0
   m_Name: arrowCheck
   m_TagString: Untagged
@@ -109,3 +110,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &725941074287651538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8528653877534525839}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8f1673998e4e53f4ba232357e1ea3c71, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
