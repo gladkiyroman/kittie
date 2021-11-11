@@ -4,10 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - arrowUp
-  - arrowDown
-  - arrowRight
-  - arrowLeft
+  - arrowSpawner
+  - arrowDestination
+  - arrow
   layers:
   - Default
   - TransparentFX

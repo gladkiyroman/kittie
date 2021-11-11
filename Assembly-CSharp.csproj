@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Minigame.cs" />
+    <Compile Include="Assets\Scripts\arrowDestination.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

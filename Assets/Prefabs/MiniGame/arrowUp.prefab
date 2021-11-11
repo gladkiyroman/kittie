@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 196986172857883942}
   m_Layer: 0
   m_Name: arrowUp
-  m_TagString: arrowUp
+  m_TagString: arrow
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
