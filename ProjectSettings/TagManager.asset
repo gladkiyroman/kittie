@@ -12,6 +12,8 @@ TagManager:
   - arrowLeft
   - arrowRight
   - item
+  - WrongObject
+  - WrongBtn
   layers:
   - Default
   - TransparentFX

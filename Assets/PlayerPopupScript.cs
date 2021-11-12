@@ -1,18 +1,17 @@
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
-using UnityEngine;
+//using System.Collections;
+//using System.Collections.Generic;
+//using TMPro;
+//using UnityEngine;
 
-public class PlayerPopupScript : MonoBehaviour
-{
-    public GameObject popUpBox;
-    public Animator animator;
-    public TMP_Text popUpText;
+//public class PlayerPopupScript : MonoBehaviour
+//{
+//    public GameObject popUpBox;
+//    public Animator animator;
 
-    public void PopUp(string text)
-    {
-        popUpBox.SetActive(true);
-        popUpText.text = text;
-        animator.SetTrigger("pop");
-    }
-}
+//    public void PopUp()
+//    {
+//        popUpBox.SetActive(true);
+//            animator.SetTrigger("pop");
+//        animator.SetTrigger("out");
+//    }
+//}
