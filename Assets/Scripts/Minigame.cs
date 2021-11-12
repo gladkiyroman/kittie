@@ -7,9 +7,9 @@ public class Minigame : MonoBehaviour
     Animator animD, animU, animL, animR;
 
     public static int lossCounter = 2;
-    public int arrowsNum = 4;
+    public static int arrowsNum = 4;
 
-    public float speed = 1f;
+    public static float speed = 2.5f;
     public GameObject[] arrows = new GameObject[4];
     GameObject selectedArrow;
     public static GameObject spawned;
@@ -19,6 +19,7 @@ public class Minigame : MonoBehaviour
     {
         GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
         StartCoroutine(startDelay());
+
     }
 
     // Update is called once per frame
@@ -31,7 +32,6 @@ public class Minigame : MonoBehaviour
             if (spawned.transform.position.x <= 0.2f)
             {
                 spawned.GetComponent<BoxCollider2D>().enabled = true;
-                GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("idle");
             }
         }
     }
@@ -62,10 +62,11 @@ public class Minigame : MonoBehaviour
 
             else if (Input.anyKey)
             {
+                miniGameFail();
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animU.enabled = true;
                 animU.SetTrigger("miss");
-                miniGameFail();
+                
             }
         }
 
@@ -82,10 +83,11 @@ public class Minigame : MonoBehaviour
 
             else if (Input.anyKey)
             {
+                miniGameFail();
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animD.enabled = true;
                 animD.SetTrigger("miss");
-                miniGameFail();
+               
 
             }
         }
@@ -103,10 +105,11 @@ public class Minigame : MonoBehaviour
 
             else if (Input.anyKey)
             {
+                miniGameFail();
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animR.enabled = true;
                 animR.SetTrigger("miss");
-                miniGameFail();
+                
 
             }
         }
@@ -125,10 +128,11 @@ public class Minigame : MonoBehaviour
 
             else if (Input.anyKey)
             {
+                miniGameFail();
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animL.enabled = true;
                 animL.SetTrigger("miss");
-                miniGameFail();
+                
 
 
             }
@@ -188,10 +192,11 @@ public class Minigame : MonoBehaviour
 
     public void miniGameFail()
     {
+        GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fail");
+        StartCoroutine(GameObject.Find("MainCam").GetComponent<CamShake>().shake(.3f, .05f));
         lossCounter -= 1;
         gameOver();
         Debug.Log("Fail");
-        GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fail");
 
     }
 

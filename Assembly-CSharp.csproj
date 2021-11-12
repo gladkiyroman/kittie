@@ -54,9 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\arrowDestination.cs" />
+    <Compile Include="Assets\Scripts\MiniGameCat.cs" />
     <Compile Include="Assets\Scripts\Minigame.cs" />
     <Compile Include="Assets\Scripts\MissCounter.cs" />
-    <Compile Include="Assets\Scripts\MiniGameCat.cs" />
+    <Compile Include="Assets\Scripts\CamShake.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

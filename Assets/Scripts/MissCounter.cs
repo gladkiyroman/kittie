@@ -11,8 +11,8 @@ public class MissCounter : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        miniGame.miniGameFail();
         collision.GetComponent<Animator>().enabled = true;
         collision.GetComponent<Animator>().SetTrigger("miss");
-        miniGame.miniGameFail();
     }
 }
