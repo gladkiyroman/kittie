@@ -23,7 +23,7 @@ public class npc1 : MonoBehaviour
     {
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
-            SceneManager.LoadScene(1);
+            SceneManager.LoadScene(2);
             Debug.Log("Starting minigame!");
         }
     }

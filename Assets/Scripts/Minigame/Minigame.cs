@@ -213,7 +213,7 @@ public class Minigame : MonoBehaviour
                 speed += 0.5f;
                 itemGenerator.speed += 5f;
                 //HARDER
-                SceneManager.LoadScene(0);
+                SceneManager.LoadScene(1);
 
             }
         }

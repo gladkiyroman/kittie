@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    Animator anim;
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public GameObject toDestroy;
@@ -13,13 +14,41 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
-        
+        anim = gameObject.GetComponent<Animator>();
     }
 
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        if (movement.x > 0)
+        {
+            anim.SetInteger("speed", 1);
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        } 
+        else if (movement.y > 0)
+        {
+            anim.SetInteger("speed", 1);
+            
+        }
+        else if (movement.x < 0)
+        {
+            anim.SetInteger("speed", 1);
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        } 
+            else if(movement.y < 0)
+        {
+            anim.SetInteger("speed", 1);
+        }
+        else
+        {
+            anim.SetInteger("speed", -1);
+        }
+
+        Debug.Log(movement.x);
+        
+
 
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
