@@ -5,8 +5,9 @@ using UnityEngine;
 public class npc1 : MonoBehaviour
 {
 
-
+    public GameObject toDestroy;
     public GameObject enterbtn2;
+    public bool isPlayerWithinZone = false;
 
     //private GameObject toDestroy;
 
@@ -19,18 +20,42 @@ public class npc1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
+        {
+            Debug.Log("Starting minigame!");
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-       // Instantiate(enterbtn2,
-        //    new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        toDestroy = Instantiate(enterbtn2, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        if (collider.tag == "Player")
+        {
+            isPlayerWithinZone = true;
+        }
     }
+
+
+    //IEnumerator watchForKeyPress()
+    //{
+    //    while (isPlayerWithinZone)
+    //    {
+    //        if (Input.GetKey(KeyCode.Return))
+    //        {
+    //            // SceneManager.LoadScene("nextDoorSceneName");
+    //            Debug.Log("Starting minigame!");
+    //        }
+    //        yield return null;
+    //    }
+    //}
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-      //  Destroy(enterbtn2);
+        Destroy(toDestroy);
+        if (collider.tag == "Player")
+        {
+            isPlayerWithinZone = false;
+        }
     }
 
 }

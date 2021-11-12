@@ -5,9 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public float moveSpeed = 5f;
-
     public Rigidbody2D rb;
-    public GameObject toDestroy;
     public GameObject enterbtn;
     
     Vector2 movement;
@@ -20,7 +18,8 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         movement.x = Input.GetAxisRaw("Horizontal");
-        movement.y = Input.GetAxisRaw("Vertical");
+        movement.y = Input.GetAxisRaw("Vertical"); 
+        
     }
 
 
@@ -31,12 +30,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collider)
     {
-        Debug.Log("Starting minigame!");
-        toDestroy = Instantiate(enterbtn, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+        Debug.Log("Checking");
+        //if (collider.tag == "npc_0")
+        //    isPlayerWithinZone = true;
     }
+
+
+    //IEnumerator watchForKeyPress()
+    //{
+    //    while (isPlayerWithinZone)
+    //    {
+    //        if (Input.GetKey(KeyCode.Return))
+    //        {
+    //            // SceneManager.LoadScene("nextDoorSceneName");
+    //            Debug.Log("Starting minigame!");
+    //        }
+    //        yield return null;
+    //    }
+    //}
 
     private void OnTriggerExit2D(Collider2D collider)
     {
-        Destroy(toDestroy);
     }
 }
