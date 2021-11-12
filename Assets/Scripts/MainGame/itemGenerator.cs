@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class itemGenerator : MonoBehaviour
 {
-    private float speed = 20f;
+    public static float speed = 20f;
     public GameObject[] items = new GameObject[4];
     int nextItemIndex;
     GameObject nextItem;

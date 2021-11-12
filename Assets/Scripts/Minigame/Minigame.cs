@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class Minigame : MonoBehaviour
 {
     Animator animD, animU, animL, animR;
+
+
+    public static int days = 0;
 
     public GameObject heart;
     public GameObject heart1;
@@ -67,6 +72,7 @@ public class Minigame : MonoBehaviour
                 heart.SetActive(false);
             }
         }
+        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Day: " + Minigame.days.ToString();
     }
 
     void spawnArrow()
@@ -201,7 +207,14 @@ public class Minigame : MonoBehaviour
             {
                 GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
                 GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
+                // HARDER
+                days += 1;
+                miniGameLength += 1;
+                speed += 0.5f;
+                itemGenerator.speed += 5f;
+                //HARDER
                 SceneManager.LoadScene(0);
+
             }
         }
     }

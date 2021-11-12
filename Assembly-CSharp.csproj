@@ -54,6 +54,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\CharacterAnim.cs" />
+    <Compile Include="Assets\Scripts\Minigame\spawnItem.cs" />
     <Compile Include="Assets\Scripts\Minigame\CamShake.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CharacterAnim.cs" />
     <Compile Include="Assets\PlayerMovement.cs" />
@@ -89,7 +90,7 @@
     <Compile Include="Assets\Scripts\MainGame\MainCat.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
-    <Compile Include="Assets\Scripts\Minigame\spawnItem.cs" />
+    <Compile Include="Assets\Scripts\MainGame\LevelController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
