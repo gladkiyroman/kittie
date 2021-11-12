@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class npc1 : MonoBehaviour
 {
@@ -22,6 +23,7 @@ public class npc1 : MonoBehaviour
     {
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
+            SceneManager.LoadScene(1);
             Debug.Log("Starting minigame!");
         }
     }

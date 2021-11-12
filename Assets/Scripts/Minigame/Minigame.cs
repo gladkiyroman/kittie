@@ -1,24 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Minigame : MonoBehaviour
 {
     Animator animD, animU, animL, animR;
 
-    public static int lossCounter = 2;
-    public static int arrowsNum = 4;
+    public GameObject heart;
+    public GameObject heart1;
+    public GameObject heart2;
+
+
+
+    public static int lossCounter = 3;
+    public int arrowsNum = 4;
+    public static int miniGameLength = 4;
 
     public static float speed = 2.5f;
     public GameObject[] arrows = new GameObject[4];
     GameObject selectedArrow;
     public static GameObject spawned;
 
-    // Start is called before the first frame update
+
     void Start()
     {
+        if (GameObject.Find("GameOver") != null)
+        {
+            GameObject.Find("GameOver").GetComponent<Animator>().enabled = false;
+        }
+        arrowsNum = miniGameLength;
+        lossCounter = 3;
         GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
         StartCoroutine(startDelay());
+
 
     }
 
@@ -32,6 +46,25 @@ public class Minigame : MonoBehaviour
             if (spawned.transform.position.x <= 0.2f)
             {
                 spawned.GetComponent<BoxCollider2D>().enabled = true;
+            }
+
+            if(lossCounter == 3)
+            {
+                heart.SetActive(true);
+                heart1.SetActive(true);
+                heart2.SetActive(true);
+            }
+            else if (lossCounter == 2)
+            {
+                heart2.SetActive(false);
+            }
+            else if (lossCounter == 1)
+            {
+                heart1.SetActive(false);
+            }
+            else if (lossCounter == 0)
+            {
+                heart.SetActive(false);
             }
         }
     }
@@ -164,10 +197,11 @@ public class Minigame : MonoBehaviour
                 animR.enabled = false;
             }
 
-            if (arrowsNum == -1)
+            if (arrowsNum == -1 && lossCounter > 0)
             {
                 GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
                 GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
+                SceneManager.LoadScene(0);
             }
         }
     }
@@ -180,6 +214,7 @@ public class Minigame : MonoBehaviour
             Debug.Log("You lost!");
             GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
             GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
+            GameObject.Find("GameOver").GetComponent<Animator>().enabled = true;
         }
     }
 
