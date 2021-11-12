@@ -23,6 +23,7 @@ public class Npc1Wrong : MonoBehaviour
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
             Debug.Log("Wrong item!");
+            
         }
     }
 
