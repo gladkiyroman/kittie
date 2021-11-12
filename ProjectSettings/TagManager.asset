@@ -3,7 +3,15 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - arrowSpawner
+  - arrowDestination
+  - arrow
+  - arrowUp
+  - arrowDown
+  - arrowLeft
+  - arrowRight
+  - item
   layers:
   - Default
   - TransparentFX
