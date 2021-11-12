@@ -13,7 +13,6 @@ public class MissCounter : MonoBehaviour
     {
         collision.GetComponent<Animator>().enabled = true;
         collision.GetComponent<Animator>().SetTrigger("miss");
-        Minigame.lossCounter -= 1;
-        miniGame.gameOver();
+        miniGame.miniGameFail();
     }
 }
