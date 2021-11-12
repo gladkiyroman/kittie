@@ -6,9 +6,9 @@ public class arrowDestination : MonoBehaviour
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "arrow")
+        if (collision.gameObject.tag == "arrowUp" || collision.gameObject.tag == "arrowDown" || collision.gameObject.tag == "arrowLeft" || collision.gameObject.tag == "arrowRight")
         {
-            Debug.Log("Ho!");
+            collision.gameObject.SetActive(false);
             
         }
     }

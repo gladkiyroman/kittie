@@ -53,8 +53,9 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Minigame.cs" />
     <Compile Include="Assets\Scripts\arrowDestination.cs" />
+    <Compile Include="Assets\Scripts\Minigame.cs" />
+    <Compile Include="Assets\Scripts\MissCounter.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

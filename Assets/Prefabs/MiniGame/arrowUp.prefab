@@ -11,9 +11,10 @@ GameObject:
   - component: {fileID: 5323731011799793872}
   - component: {fileID: 4908490138328708244}
   - component: {fileID: 196986172857883942}
+  - component: {fileID: -2884651442660001304}
   m_Layer: 0
   m_Name: arrowUp
-  m_TagString: arrow
+  m_TagString: arrowUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -96,7 +97,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.001011908, y: 0.030358315}
+  m_Offset: {x: -0.0044574738, y: 0.028980017}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -107,5 +108,24 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.20868623, y: 0.24309254}
+  m_Size: {x: 0.12185979, y: 0.119054794}
   m_EdgeRadius: 0
+--- !u!95 &-2884651442660001304
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2589328629638843011}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 413ac120f607789479b594daa8d0140d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
