@@ -53,11 +53,13 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\arrowDestination.cs" />
-    <Compile Include="Assets\Scripts\MiniGameCat.cs" />
-    <Compile Include="Assets\Scripts\Minigame.cs" />
-    <Compile Include="Assets\Scripts\MissCounter.cs" />
-    <Compile Include="Assets\Scripts\CamShake.cs" />
+    <Compile Include="Assets\Scripts\Minigame\CamShake.cs" />
+    <Compile Include="Assets\Scripts\Minigame\arrowDestination.cs" />
+    <Compile Include="Assets\Scripts\Minigame\MiniGameCat.cs" />
+    <Compile Include="Assets\Scripts\Minigame\Minigame.cs" />
+    <Compile Include="Assets\Scripts\Minigame\MissCounter.cs" />
+    <Compile Include="Assets\Scripts\MainGame\itemGenerator.cs" />
+    <Compile Include="Assets\Scripts\MainGame\MainCat.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
