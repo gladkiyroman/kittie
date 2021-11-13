@@ -54,9 +54,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\CharacterAnim.cs" />
+    <Compile Include="Assets\Scripts\Minigame\spawnItem.cs" />
     <Compile Include="Assets\Scripts\Minigame\CamShake.cs" />
+    <Compile Include="Assets\Scripts\MainGame\Roma\PlayerMovement.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CharacterAnim.cs" />
-    <Compile Include="Assets\PlayerMovement.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\Door.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CharacterController2D.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CharacterHoldItem.cs" />
@@ -65,22 +66,24 @@
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\CarryItem.cs" />
     <Compile Include="Assets\Scripts\Minigame\MissCounter.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\TheAudio.cs" />
+    <Compile Include="Assets\Scripts\MainGame\Roma\Npc1Wrong.cs" />
     <Compile Include="Assets\PlayerPopupScript.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\PlayerCharacter.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\AutoOrderLayer.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\Lever.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FollowCamera.cs" />
+    <Compile Include="Assets\Scripts\MainGame\Roma\Npc2Right.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\AutoOrderLayerChild.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CarryItem.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\PlayerCharacter.cs" />
+    <Compile Include="Assets\Scripts\MainGame\LevelController.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Minigame\arrowDestination.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\Key.cs" />
     <Compile Include="Assets\npc1.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\TheAudio.cs" />
     <Compile Include="Assets\Scripts\Minigame\MiniGameCat.cs" />
-    <Compile Include="Assets\Npc1Wrong.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\FollowCamera.cs" />
     <Compile Include="Assets\Scripts\Minigame\Minigame.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\CharacterHoldItem.cs" />
@@ -89,7 +92,7 @@
     <Compile Include="Assets\Scripts\MainGame\MainCat.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
-    <Compile Include="Assets\Scripts\Minigame\spawnItem.cs" />
+    <Compile Include="Assets\Scripts\Menu\FollowMouse.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

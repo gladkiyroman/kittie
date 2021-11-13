@@ -12,14 +12,11 @@ TagManager:
   - arrowLeft
   - arrowRight
   - item
-  - tuna
-  - wine
-  - toothpaste
-  - scissors
   - wine(Clone)
   - scissors(Clone)
   - tuna(Clone)
   - toothpaste(Clone)
+  - pause
   layers:
   - Default
   - TransparentFX
