@@ -15,7 +15,7 @@ public class Minigame : MonoBehaviour
     public GameObject heart1;
     public GameObject heart2;
 
-
+    public GameObject playerMini;
 
     public static int lossCounter = 3;
     public int arrowsNum = 4;
@@ -96,7 +96,7 @@ public class Minigame : MonoBehaviour
                 Debug.Log("Success");
                 //GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("success");
                 animU = GameObject.FindGameObjectWithTag("arrowUp").GetComponent<Animator>();
-                GameObject.Find("Player").GetComponent<Animator>().SetTrigger("attack");
+                playerMini.GetComponent<Animator>().SetTrigger("attack");
                 animU.enabled = true;
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
@@ -118,7 +118,7 @@ public class Minigame : MonoBehaviour
                 Debug.Log("Success");
                 //GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("success");
                 animD = GameObject.FindGameObjectWithTag("arrowDown").GetComponent<Animator>();
-                GameObject.Find("Player").GetComponent<Animator>().SetTrigger("attack");
+                playerMini.GetComponent<Animator>().SetTrigger("attack");
                 animD.enabled = true;
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
@@ -141,7 +141,7 @@ public class Minigame : MonoBehaviour
                 Debug.Log("Success");
                 //GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("success");
                 animR = GameObject.FindGameObjectWithTag("arrowRight").GetComponent<Animator>();
-                GameObject.Find("Player").GetComponent<Animator>().SetTrigger("attack");
+                playerMini.GetComponent<Animator>().SetTrigger("attack");
                 animR.enabled = true;
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
             }
@@ -164,7 +164,7 @@ public class Minigame : MonoBehaviour
             {
                 Debug.Log("Success");
                 //GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("success");
-                GameObject.Find("Player").GetComponent<Animator>().SetTrigger("attack");
+                playerMini.GetComponent<Animator>().SetTrigger("attack");
                 animL = GameObject.FindGameObjectWithTag("arrowLeft").GetComponent<Animator>();
                 animL.enabled = true;
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
@@ -191,10 +191,8 @@ public class Minigame : MonoBehaviour
         while (arrowsNum >= 0)
         {
                 arrowsNum -= 1;
-            if (arrowsNum > 0)
-            {
                 spawnArrow();
-            }
+
                 yield return new WaitForSeconds(time);
 
             if (animD != null) 
@@ -251,7 +249,7 @@ public class Minigame : MonoBehaviour
     {
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fail");
         StartCoroutine(GameObject.Find("MainCam").GetComponent<CamShake>().shake(.3f, .05f));
-        GameObject.Find("Player").GetComponent<Animator>().SetTrigger("damaged");
+        playerMini.GetComponent<Animator>().SetTrigger("damaged");
         lossCounter -= 1;
         gameOver();
         Debug.Log("Fail");
@@ -274,7 +272,7 @@ public class Minigame : MonoBehaviour
     {
         if (GameObject.Find("SpawnItem") != null)
         {
-            GameObject.Find("SpawnItem").transform.position = GameObject.Find("Player").transform.position;
+            GameObject.Find("SpawnItem").transform.position = new Vector2(playerMini.transform.position.x  -0.6f, playerMini.transform.position.y);
         }
     }
 
