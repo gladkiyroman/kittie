@@ -176,9 +176,6 @@ public class Minigame : MonoBehaviour
                 collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                 animL.enabled = true;
                 animL.SetTrigger("miss");
-                
-
-
             }
         }
     }
@@ -221,8 +218,8 @@ public class Minigame : MonoBehaviour
                 // HARDER
                 days += 1;
                 miniGameLength += 1;
-                speed += 0.5f;
-                itemGenerator.speed += 5f;
+                speed += 0.9f;
+                itemGenerator.speed += 20f;
                 //HARDER
                 StartCoroutine(delayedSceneLoad(1.5f));
 

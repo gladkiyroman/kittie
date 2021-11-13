@@ -5,7 +5,8 @@ using UnityEngine;
 public class itemGenerator : MonoBehaviour
 {
     public static float speed = 20f;
-    public GameObject[] items = new GameObject[4];
+    //public GameObject[] items = new GameObject[4];
+    public List<GameObject> iteems = new List<GameObject>();
     int nextItemIndex;
     GameObject nextItem;
     GameObject clonedItem;
@@ -31,9 +32,10 @@ public class itemGenerator : MonoBehaviour
     }
     void generateItem()
     {
-        nextItemIndex = Random.Range(0, items.Length);
-        nextItem = items[nextItemIndex];
+        nextItemIndex = Random.Range(0, iteems.Count);
+        nextItem = iteems[nextItemIndex];
         clonedItem = Instantiate(nextItem, transform.position, Quaternion.identity);
+        iteems.Remove(nextItem);
         rb = clonedItem.GetComponent<Rigidbody2D>();
     }
 
@@ -43,12 +45,12 @@ public class itemGenerator : MonoBehaviour
         GameObject.FindGameObjectWithTag(clonedItem.name).GetComponent<npc1>().enabled = true;
         GameObject.FindGameObjectWithTag(clonedItem.name).GetComponent<Npc1Wrong>().enabled = false;
 
-        for (int i = 0; i < items.Length; i++)
+        for (int i = 0; i < iteems.Count; i++)
         {
-            if (items[i].name + "(Clone)" != clonedItem.name)
+            if (iteems[i].name + "(Clone)" != clonedItem.name)
             {
-                GameObject.FindGameObjectWithTag(items[i].name + "(Clone)").GetComponent<npc1>().enabled = false;
-                GameObject.FindGameObjectWithTag(items[i].name + "(Clone)").GetComponent<Npc1Wrong>().enabled = true;
+                GameObject.FindGameObjectWithTag(iteems[i].name + "(Clone)").GetComponent<npc1>().enabled = false;
+                GameObject.FindGameObjectWithTag(iteems[i].name + "(Clone)").GetComponent<Npc1Wrong>().enabled = true;
             }
             
             

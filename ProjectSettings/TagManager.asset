@@ -17,6 +17,11 @@ TagManager:
   - tuna(Clone)
   - toothpaste(Clone)
   - pause
+  - vac(Clone)
+  - sushi(Clone)
+  - jam(Clone)
+  - paper(Clone)
+  - piano(Clone)
   layers:
   - Default
   - TransparentFX
