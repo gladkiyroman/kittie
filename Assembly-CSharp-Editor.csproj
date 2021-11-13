@@ -53,10 +53,10 @@
     <UnityVersion>2020.3.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\IndieMarc\PlatformerDemo\Editor\ImportPackage.cs" />
-    <Compile Include="Assets\IndieMarc\TopDownDemo\Editor\FixZ.cs" />
-    <Compile Include="Assets\IndieMarc\TopDownDemo\Editor\ImportPackage.cs" />
-    <Compile Include="Assets\IndieMarc\TopDownDemo\Editor\ReplacePrefab.cs" />
+    <Compile Include="Assets\TinyRPGTown\IndieMarc\PlatformerDemo\Editor\ImportPackage.cs" />
+    <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Editor\FixZ.cs" />
+    <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Editor\ImportPackage.cs" />
+    <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Editor\ReplacePrefab.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

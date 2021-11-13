@@ -33,10 +33,10 @@ public class LevelController : MonoBehaviour
 
         pause_menu();
 
-        GameObject.Find("Days").GetComponent<Text>().text = "Day: " + Minigame.days.ToString();
+        GameObject.Find("Days").GetComponent<Text>().text = "Hours: " + Minigame.days.ToString();
 
         
-        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Day: " + Minigame.days.ToString();
+        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Hours: " + Minigame.days.ToString();
         
     }
 

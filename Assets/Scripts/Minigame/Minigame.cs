@@ -6,6 +6,12 @@ using UnityEngine.UI;
 
 public class Minigame : MonoBehaviour
 {
+
+    public List<string> dialogues_CatWins = new List<string>();
+
+    public GameObject cloud;
+    public GameObject cloudText;
+
     Animator animD, animU, animL, animR;
 
 
@@ -29,6 +35,8 @@ public class Minigame : MonoBehaviour
 
     void Start()
     {
+        int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
+        cloud.SetActive(false);
         if (GameObject.Find("GameOver") != null)
         {
             GameObject.Find("GameOver").GetComponent<Animator>().enabled = false;
@@ -73,7 +81,7 @@ public class Minigame : MonoBehaviour
                 heart.SetActive(false);
             }
         }
-        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Day: " + Minigame.days.ToString();
+        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Hours: " + Minigame.days.ToString();
     }
 
     void spawnArrow()
@@ -232,6 +240,7 @@ public class Minigame : MonoBehaviour
         if (lossCounter == 0)
         {
             arrowsNum = 0;
+            StartCoroutine(dialogue());
             StartCoroutine(destroyItem());
         }
     }
@@ -280,6 +289,21 @@ public class Minigame : MonoBehaviour
         yield return new WaitForSeconds(time);
         SceneManager.LoadScene(1);
     }
+
+
+
+    IEnumerator dialogue()
+    {
+        int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
+        string line = dialogues_CatWins[dialogueIndex];
+        cloud.SetActive(true);
+        cloudText.GetComponent<Text>().text = line;
+        yield return new WaitForSeconds(3f);
+        cloud.SetActive(false);
+    }
+
+
+
 
     }//class
 
