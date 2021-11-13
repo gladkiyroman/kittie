@@ -9,6 +9,9 @@ public class Minigame : MonoBehaviour
 
     public List<string> dialogues_CatWins = new List<string>();
 
+
+    public List<string> dialogues_CatLoses = new List<string>();
+
     public GameObject cloud;
     public GameObject cloudText;
 
@@ -36,6 +39,7 @@ public class Minigame : MonoBehaviour
     void Start()
     {
         int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
+        int dialogueIndexLoss = Random.Range(0, dialogues_CatLoses.Count);
         cloud.SetActive(false);
         if (GameObject.Find("GameOver") != null)
         {
@@ -229,7 +233,8 @@ public class Minigame : MonoBehaviour
                 speed += 0.9f;
                 itemGenerator.speed += 20f;
                 //HARDER
-                StartCoroutine(delayedSceneLoad(1.5f));
+                StartCoroutine(dialogueLoss());
+                StartCoroutine(delayedSceneLoad(2.5f));
 
             }
         }
@@ -296,6 +301,16 @@ public class Minigame : MonoBehaviour
     {
         int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
         string line = dialogues_CatWins[dialogueIndex];
+        cloud.SetActive(true);
+        cloudText.GetComponent<Text>().text = line;
+        yield return new WaitForSeconds(3f);
+        cloud.SetActive(false);
+    }
+
+    IEnumerator dialogueLoss()
+    {
+        int dialogueIndexLoss = Random.Range(0, dialogues_CatLoses.Count);
+        string line = dialogues_CatLoses[dialogueIndexLoss];
         cloud.SetActive(true);
         cloudText.GetComponent<Text>().text = line;
         yield return new WaitForSeconds(3f);

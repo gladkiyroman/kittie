@@ -19,6 +19,7 @@ public class AbuseFix : MonoBehaviour
             if (collision.gameObject.CompareTag("arrowUp"))
             {
 
+                animU = GameObject.FindGameObjectWithTag("arrowUp").GetComponent<Animator>();
                 m_game.miniGameFail();
                     collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     animU.enabled = true;
@@ -28,7 +29,7 @@ public class AbuseFix : MonoBehaviour
 
             if (collision.gameObject.CompareTag("arrowDown"))
             {
-
+                animD = GameObject.FindGameObjectWithTag("arrowDown").GetComponent<Animator>();
                 m_game.miniGameFail();
                     collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     animD.enabled = true;
@@ -39,6 +40,7 @@ public class AbuseFix : MonoBehaviour
 
             if (collision.gameObject.CompareTag("arrowRight"))
                 {
+                animR = GameObject.FindGameObjectWithTag("arrowRight").GetComponent<Animator>();
                 m_game.miniGameFail();
                     collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     animR.enabled = true;
@@ -49,7 +51,7 @@ public class AbuseFix : MonoBehaviour
 
             if (collision.gameObject.CompareTag("arrowLeft"))
             {
-
+                animL = GameObject.FindGameObjectWithTag("arrowLeft").GetComponent<Animator>();
                 m_game.miniGameFail();
                     collision.gameObject.GetComponent<BoxCollider2D>().enabled = false;
                     animL.enabled = true;
