@@ -78,6 +78,7 @@
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\CarryItem.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\PlayerCharacter.cs" />
     <Compile Include="Assets\Scripts\MainGame\LevelController.cs" />
+    <Compile Include="Assets\playerAni.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Minigame\arrowDestination.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\Key.cs" />
@@ -93,7 +94,6 @@
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Menu\FollowMouse.cs" />
     <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
-    <Compile Include="Assets\playerAni.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

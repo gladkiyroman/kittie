@@ -49,7 +49,7 @@ public class PlayerMovement : MonoBehaviour
             anim.SetInteger("speed", -1);
         }
 
-        Debug.Log(movement.x);
+       
         
 
 

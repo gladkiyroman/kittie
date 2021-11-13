@@ -188,6 +188,7 @@ public class Minigame : MonoBehaviour
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fights");
         yield return new WaitForSeconds(2f);
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("idle");
+        yield return new WaitForSeconds(1f);
         while (arrowsNum >= 0)
         {
                 arrowsNum -= 1;
