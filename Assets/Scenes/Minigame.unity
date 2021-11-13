@@ -123,6 +123,31 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &811199413 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8528653877534525839, guid: 84f5dedbfd07c5a47abd491d79d524fe,
+    type: 3}
+  m_PrefabInstance: {fileID: 2055381280926859795}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &811199414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 811199413}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c6b8d333254d85d49b81f6f8d035a88f, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1437637196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4101127157541207061, guid: 0a0e132fb6e517e4b8d7570df031efae,
@@ -292,17 +317,17 @@ PrefabInstance:
     - target: {fileID: 4880720625270610949, guid: 84f5dedbfd07c5a47abd491d79d524fe,
         type: 3}
       propertyPath: m_Color.b
-      value: 1
+      value: 0.8718592
       objectReference: {fileID: 0}
     - target: {fileID: 4880720625270610949, guid: 84f5dedbfd07c5a47abd491d79d524fe,
         type: 3}
       propertyPath: m_Color.g
-      value: 0.7951651
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4880720625270610949, guid: 84f5dedbfd07c5a47abd491d79d524fe,
         type: 3}
       propertyPath: m_Color.r
-      value: 0.63584906
+      value: 0.19245279
       objectReference: {fileID: 0}
     - target: {fileID: 8528653877534525839, guid: 84f5dedbfd07c5a47abd491d79d524fe,
         type: 3}
@@ -313,6 +338,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_RootOrder
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142743354191422126, guid: 84f5dedbfd07c5a47abd491d79d524fe,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9142743354191422126, guid: 84f5dedbfd07c5a47abd491d79d524fe,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 9142743354191422126, guid: 84f5dedbfd07c5a47abd491d79d524fe,
         type: 3}
@@ -1048,7 +1083,7 @@ PrefabInstance:
     - target: {fileID: 8713330748560640561, guid: 7da0393e15ea823498e4a873c99ba18b,
         type: 3}
       propertyPath: m_Color.a
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7da0393e15ea823498e4a873c99ba18b, type: 3}
