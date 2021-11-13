@@ -223,11 +223,8 @@ public class Minigame : MonoBehaviour
     {
         if (lossCounter == 0)
         {
-            arrowsNum = -1;
-            Debug.Log("You lost!");
-            GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
-            GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
-            GameObject.Find("GameOver").GetComponent<Animator>().enabled = true;
+            arrowsNum = 0;
+            StartCoroutine(destroyItem());
         }
     }
 
@@ -248,9 +245,18 @@ public class Minigame : MonoBehaviour
 
     }
 
+    IEnumerator destroyItem()
+    {
+        GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("catWins");
+        yield return new WaitForSeconds(2f);
+        arrowsNum = -1;
+        Debug.Log("You lost!");
+        GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
+        GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
+        GameObject.Find("GameOver").GetComponent<Animator>().enabled = true;
+    }
 
-
-}//class
+    }//class
 
 
 

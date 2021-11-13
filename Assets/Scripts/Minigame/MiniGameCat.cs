@@ -15,4 +15,12 @@ public class MiniGameCat : MonoBehaviour
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("idle");
     }
 
+    public void kickItem()
+    {
+        if (itemGenerator.sp != null)
+        {
+            GameObject.Find("SpawnItem").transform.Translate(Vector2.down*5 * Time.deltaTime*100);
+        }
+    }
+
 }

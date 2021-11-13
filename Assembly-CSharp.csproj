@@ -91,8 +91,8 @@
     <Compile Include="Assets\Scripts\MainGame\itemGenerator.cs" />
     <Compile Include="Assets\Scripts\MainGame\MainCat.cs" />
     <Compile Include="Assets\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
-    <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
     <Compile Include="Assets\Scripts\Menu\FollowMouse.cs" />
+    <Compile Include="Assets\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

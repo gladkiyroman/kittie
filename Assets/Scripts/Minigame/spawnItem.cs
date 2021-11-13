@@ -10,6 +10,7 @@ public class spawnItem : MonoBehaviour
         if (itemGenerator.sp != null)
         {
             gameObject.GetComponent<SpriteRenderer>().sprite = itemGenerator.sp;
+
         }
     }
 }
