@@ -11,9 +11,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/TinyRPGTown/IndieMarc/TopDownDemo/TopDownDemo.unity
     guid: 35fa846952ea23b41a9dca4d21464be1
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menu.unity
     guid: 2c67f734e9b1871418a3d0bf6def64b4
+  - enabled: 1
+    path: Assets/Scenes2/Menu.unity
+    guid: d9123f142cdbca949b3ba82bb97a3e7a
   - enabled: 1
     path: Assets/Scenes/Demo.unity
     guid: b87d6bd6fb69649ae8ba8542ffafc2b4
@@ -21,6 +24,6 @@ EditorBuildSettings:
     path: Assets/Scenes/Minigame.unity
     guid: 5b1ad59c4136fd64c8147dd9498b867a
   - enabled: 0
-    path: Assets/Scenes/Maingame.unity
-    guid: 89b7ce4777f6dd84cb82d6efadfbe1c1
+    path: 
+    guid: 00000000000000000000000000000000
   m_configObjects: {}

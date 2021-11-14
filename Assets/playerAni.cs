@@ -13,6 +13,7 @@ public class playerAni : MonoBehaviour
     }
     public void dmgAndsetIdle()
     {
+        GameObject.Find("AudioCat").GetComponent<AudioSource>().Play();
         cat.GetComponent<Animator>().SetTrigger("success");
         anim = GetComponent<Animator>();
         anim.SetTrigger("idle");

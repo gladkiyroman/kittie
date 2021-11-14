@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -92,7 +92,7 @@ public class Minigame : MonoBehaviour
                 heart.SetActive(false);
             }
         }
-        GameObject.Find("GameOver").GetComponent<Text>().text = "Game Over" + "\n" + "Hours: " + Minigame.days.ToString();
+        GameObject.Find("GameOver").GetComponent<Text>().text = "ГРУ ЗАВЕРШЕНО" + "\n" + "ГОДИНИ: " + days.ToString();
     }
 
     void spawnArrow()
@@ -231,6 +231,7 @@ public class Minigame : MonoBehaviour
 
             if (arrowsNum == -1 && lossCounter > 0)
             {
+                GameObject.Find("AudioWin").GetComponent<AudioSource>().Play();
                 GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
                 GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
                 takeItem();
@@ -251,6 +252,7 @@ public class Minigame : MonoBehaviour
     {
         if (lossCounter == 0)
         {
+            GameObject.Find("AudioLoss").GetComponent<AudioSource>().Play();
             arrowsNum = 0;
             StartCoroutine(dialogue());
             StartCoroutine(destroyItem());
@@ -267,6 +269,7 @@ public class Minigame : MonoBehaviour
 
     public void miniGameFail()
     {
+        GameObject.Find("AudioHit").GetComponent<AudioSource>().Play();
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fail");
         StartCoroutine(GameObject.Find("MainCam").GetComponent<CamShake>().shake(.3f, .05f));
         playerMini.GetComponent<Animator>().SetTrigger("damaged");
@@ -329,6 +332,11 @@ public class Minigame : MonoBehaviour
 
     public void endGameClick()
     {
+        days = 0;
+        speed = 2.5f;
+        miniGameLength = 4;
+        itemGenerator.speed = 50f;
+
         SceneManager.LoadScene(0);
     }
 

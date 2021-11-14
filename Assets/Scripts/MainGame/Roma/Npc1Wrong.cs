@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Npc1Wrong : MonoBehaviour
 {
-
+    public AudioSource audio;
     public GameObject toDestroy;
     public GameObject enterbtn2;
     public bool isPlayerWithinZone = false;
@@ -14,7 +14,7 @@ public class Npc1Wrong : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audio = GameObject.Find("AudioWrong").GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -22,6 +22,7 @@ public class Npc1Wrong : MonoBehaviour
     {
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
+            audio.Play();
             Debug.Log("Wrong item!");
             
         }

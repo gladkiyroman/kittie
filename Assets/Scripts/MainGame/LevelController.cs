@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -35,10 +35,10 @@ public class LevelController : MonoBehaviour
 
         pause_menu();
 
-        GameObject.Find("Days").GetComponent<Text>().text = "Hours: " + Minigame.days.ToString();
+        GameObject.Find("Days").GetComponent<Text>().text = "ГОДИНИ: " + Minigame.days.ToString();
 
         
-        GameOver.GetComponent<Text>().text = "Game Over" + "\n" + "Hours: " + Minigame.days.ToString();
+        GameOver.GetComponent<Text>().text = "ГРУ ЗАВЕРШЕНО" + "\n" + "ГОДИНИ: " + Minigame.days.ToString();
         
     }
 
@@ -61,7 +61,7 @@ public class LevelController : MonoBehaviour
         paused = false;
         Time.timeScale = 1;
         pauseObject.SetActive(false);
-        Debug.Log("Resume!!!!");
+       
     }
 
     public void exitGame()
@@ -74,6 +74,7 @@ public class LevelController : MonoBehaviour
 
     public void mainMenu()
     {
+
         SceneManager.LoadScene(0);
         escaped = false;
         paused = false;

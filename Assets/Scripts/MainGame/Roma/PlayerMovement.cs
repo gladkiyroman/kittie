@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
+    public AudioSource audio;
     Animator anim;
     public float moveSpeed = 5f;
     public Rigidbody2D rb;
@@ -14,6 +15,8 @@ public class PlayerMovement : MonoBehaviour
 
     void Start()
     {
+
+        
         anim = gameObject.GetComponent<Animator>();
     }
 
@@ -55,6 +58,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
+            
             toDestroy = Instantiate(WrongPopUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
         }
 

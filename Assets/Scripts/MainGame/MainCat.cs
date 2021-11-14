@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MainCat : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class MainCat : MonoBehaviour
             GameObject.Find("SceneCoverMainGame").GetComponent<Animator>().SetTrigger("endScene");
             GameObject.Find("GameOver").GetComponent<Animator>().enabled = true;
             mini.GetComponent<Minigame>().gameOver();
+            GameObject.Find("ButtonGameOver").GetComponent<RectTransform>().localScale = new Vector2(1, 1);
         }
     }
 
