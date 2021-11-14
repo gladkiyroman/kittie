@@ -82,6 +82,7 @@
     <Compile Include="Assets\playerAni.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\PlatformerDemo\Scripts\PlayerControls.cs" />
     <Compile Include="Assets\Scripts\Minigame\arrowDestination.cs" />
+    <Compile Include="Assets\Hueta2\Dialogue.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Scripts\Key.cs" />
     <Compile Include="Assets\npc1.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Scripts\TheAudio.cs" />
@@ -92,13 +93,13 @@
     <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Scripts\Sprite3D.cs" />
     <Compile Include="Assets\tutorialController.cs" />
     <Compile Include="Assets\Scripts\MainGame\itemGenerator.cs" />
+    <Compile Include="Assets\Hueta2\AudioRandomizer.cs" />
+    <Compile Include="Assets\Hueta2\DialogueTrigger.cs" />
     <Compile Include="Assets\Scripts\MainGame\MainCat.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Menu\FollowMouse.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
-    <Compile Include="Assets\Hueta2\Dialogue.cs" />
-    <Compile Include="Assets\Hueta2\AudioRandomizer.cs" />
-    <Compile Include="Assets\Hueta2\DialogueTrigger.cs" />
+    <Compile Include="Assets\anima.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TinyRPGTown\TextMesh Pro\Shaders\TMPro.cginc" />

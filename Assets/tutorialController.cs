@@ -41,7 +41,7 @@ public class tutorialController : MonoBehaviour
         if (tutor_count == 0)
         {
 
-                tutor_text.GetComponent<Text>().text = "Я ЗАЙМУСЬ ЦИМИ ПОРОДЖЕННЯМИ ЗЛА!";
+                tutor_text.GetComponent<Text>().text = "ВИХОДЖУ НА ПОЛЮВАННЯ ЗА НЕБЕЗПЕЧНИМИ РЕЧИМА!";
                 tutor_count += 1;
             
         }
@@ -68,7 +68,7 @@ public class tutorialController : MonoBehaviour
             if (Input.anyKeyDown)
             {
                 
-                tutor_text_pl.GetComponent<Text>().text = "ТРЕБА ЙОГО ЗНАЙТИ, ПОКИ ЗНОВ НЕ НАЧУДИВ!";
+                tutor_text_pl.GetComponent<Text>().text = "О НІ! МОЇ РЕЧІ!";
                 tutor_count += 1;
                 btns.SetActive(true);
             }
@@ -82,6 +82,7 @@ public class tutorialController : MonoBehaviour
                 levelCtrl.GetComponent<LevelController>().enabled = true;
                 cover.SetActive(true);
                 btns.SetActive(false);
+                gameObject.SetActive(false);
 
             }
         }

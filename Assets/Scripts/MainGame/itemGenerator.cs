@@ -15,11 +15,20 @@ public class itemGenerator : MonoBehaviour
 
     Rigidbody2D rb;
 
+
+    public static GameObject repeat;
+
     private void Start()
     {
+        if (iteems != null)
+        {
+            iteems.Remove(repeat);
+        }
+        GameObject.Find("ButtonGameOver").GetComponent<RectTransform>().localScale = new Vector2(0, 0);
         generateItem();
         locateItem();
         sp = clonedItem.GetComponent<SpriteRenderer>().sprite;
+        //GameObject.Find("TutorialController").SetActive(false);
     }
 
     private void FixedUpdate()
@@ -36,6 +45,7 @@ public class itemGenerator : MonoBehaviour
         nextItem = iteems[nextItemIndex];
         clonedItem = Instantiate(nextItem, transform.position, Quaternion.identity);
         iteems.Remove(nextItem);
+        repeat = nextItem;
         rb = clonedItem.GetComponent<Rigidbody2D>();
     }
 

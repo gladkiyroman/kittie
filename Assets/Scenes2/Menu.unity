@@ -1102,7 +1102,7 @@ GameObject:
   - component: {fileID: 1007698906}
   - component: {fileID: 1007698905}
   m_Layer: 5
-  m_Name: Cat
+  m_Name: Cat1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1990,7 +1990,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
-  tutor: {fileID: 0}
+  tutor: {fileID: 6962584491255655670, guid: 395d03604bea42c4c963ae87cbd0fe07, type: 3}
 --- !u!212 &1432941124
 SpriteRenderer:
   m_ObjectHideFlags: 0

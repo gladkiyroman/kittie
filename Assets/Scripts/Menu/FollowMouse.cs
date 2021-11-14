@@ -39,8 +39,8 @@ public class FollowMouse : MonoBehaviour
 
     public void startNew()
     {
-        //tutor.SetActive(true);
-        SceneManager.LoadScene(1);
+        tutor.SetActive(true);
+        SceneManager.LoadScene(3);
     }
     public void closeGame()
     {

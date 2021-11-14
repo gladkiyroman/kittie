@@ -41,10 +41,13 @@ public class Minigame : MonoBehaviour
     public GameObject menuBtn;
 
 
+    private void Awake()
+    {
+        tutor.SetActive(false);
+    }
     void Start()
     {
         menuBtn.SetActive(false);
-        tutor.SetActive(false);
         int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
         int dialogueIndexLoss = Random.Range(0, dialogues_CatLoses.Count);
         cloud.SetActive(false);
