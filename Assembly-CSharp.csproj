@@ -95,6 +95,7 @@
     <Compile Include="Assets\TinyRPGTown\IndieMarc\PlatformerDemo\Scripts\ParallaxBackground.cs" />
     <Compile Include="Assets\Scripts\Menu\FollowMouse.cs" />
     <Compile Include="Assets\TinyRPGTown\IndieMarc\TopDownDemo\Scripts\FixOffset.cs" />
+    <Compile Include="Assets\tutorialController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TinyRPGTown\TextMesh Pro\Shaders\TMPro.cginc" />

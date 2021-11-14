@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainCat : MonoBehaviour
 {
+    public GameObject mini;
     private void Awake()
     {
         GameObject.Find("GameOver").GetComponent<Animator>().enabled = false;
@@ -15,6 +16,7 @@ public class MainCat : MonoBehaviour
         {
             GameObject.Find("SceneCoverMainGame").GetComponent<Animator>().SetTrigger("endScene");
             GameObject.Find("GameOver").GetComponent<Animator>().enabled = true;
+            mini.GetComponent<Minigame>().gameOver();
         }
     }
 

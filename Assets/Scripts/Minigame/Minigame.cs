@@ -36,8 +36,15 @@ public class Minigame : MonoBehaviour
     public static GameObject spawned;
 
 
+    public GameObject tutor;
+
+    public GameObject menuBtn;
+
+
     void Start()
     {
+        menuBtn.SetActive(false);
+        tutor.SetActive(false);
         int dialogueIndex = Random.Range(0, dialogues_CatWins.Count);
         int dialogueIndexLoss = Random.Range(0, dialogues_CatLoses.Count);
         cloud.SetActive(false);
@@ -247,6 +254,7 @@ public class Minigame : MonoBehaviour
             arrowsNum = 0;
             StartCoroutine(dialogue());
             StartCoroutine(destroyItem());
+            
         }
     }
 
@@ -304,6 +312,7 @@ public class Minigame : MonoBehaviour
         cloud.SetActive(true);
         cloudText.GetComponent<Text>().text = line;
         yield return new WaitForSeconds(3f);
+        menuBtn.SetActive(true);
         cloud.SetActive(false);
     }
 
@@ -318,7 +327,10 @@ public class Minigame : MonoBehaviour
     }
 
 
-
+    public void endGameClick()
+    {
+        SceneManager.LoadScene(0);
+    }
 
     }//class
 

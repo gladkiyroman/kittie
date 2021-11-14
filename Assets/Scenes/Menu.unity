@@ -754,6 +754,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 0.1
+  tutor: {fileID: 6962584491255655670, guid: 395d03604bea42c4c963ae87cbd0fe07, type: 3}
 --- !u!212 &1432941124
 SpriteRenderer:
   m_ObjectHideFlags: 0

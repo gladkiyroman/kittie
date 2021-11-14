@@ -9,6 +9,9 @@ public class FollowMouse : MonoBehaviour
     private Vector3 mousePosition;
     public float moveSpeed = 0.01f;
 
+
+    public GameObject tutor;
+
     // Use this for initialization
     void Start()
     {
@@ -36,6 +39,7 @@ public class FollowMouse : MonoBehaviour
 
     public void startNew()
     {
+        tutor.SetActive(true);
         SceneManager.LoadScene(1);
     }
     public void closeGame()
