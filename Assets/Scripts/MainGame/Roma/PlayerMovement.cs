@@ -9,12 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public Rigidbody2D rb;
     public GameObject toDestroy;
     public GameObject WrongPopUp;
+    public AudioSource audio;
     public bool isPlayerWithinZone = false;
     Vector2 movement;
 
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
+        audio = GameObject.Find("AudioWrong").GetComponent<AudioSource>();
     }
 
     void Update()
@@ -49,13 +51,13 @@ public class PlayerMovement : MonoBehaviour
             anim.SetInteger("speed", -1);
         }
 
-        Debug.Log(movement.x);
         
 
 
         if (isPlayerWithinZone && Input.GetKeyDown(KeyCode.Return))
         {
             toDestroy = Instantiate(WrongPopUp, new Vector3(transform.position.x, transform.position.y, transform.position.z), Quaternion.identity);
+            audio.Play();
         }
 
     }

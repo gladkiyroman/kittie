@@ -214,6 +214,7 @@ public class Minigame : MonoBehaviour
 
             if (arrowsNum == -1 && lossCounter > 0)
             {
+                GameObject.Find("AudioWin").GetComponent<AudioSource>().Play();
                 GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
                 GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
                 takeItem();
@@ -233,6 +234,7 @@ public class Minigame : MonoBehaviour
     {
         if (lossCounter == 0)
         {
+            GameObject.Find("AudioLoss").GetComponent<AudioSource>().Play();
             arrowsNum = 0;
             StartCoroutine(destroyItem());
         }
@@ -248,6 +250,7 @@ public class Minigame : MonoBehaviour
     public void miniGameFail()
     {
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("fail");
+        GameObject.Find("AudioHit").GetComponent<AudioSource>().Play();
         StartCoroutine(GameObject.Find("MainCam").GetComponent<CamShake>().shake(.3f, .05f));
         playerMini.GetComponent<Animator>().SetTrigger("damaged");
         lossCounter -= 1;

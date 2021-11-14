@@ -9,6 +9,7 @@ public class FollowMouse : MonoBehaviour
     private Vector3 mousePosition;
     public float moveSpeed = 0.01f;
 
+
     // Use this for initialization
     void Start()
     {
