@@ -9,10 +9,11 @@ public class LevelController : MonoBehaviour
     public GameObject pauseObject;
     public GameObject GameOver;
     public static bool paused;
-    public bool escaped = false;
+    public static bool escaped = false;
     private void Start()
     {
         paused = false;
+        escaped = false;
     }
     void Update()
     {
@@ -66,10 +67,12 @@ public class LevelController : MonoBehaviour
 
     public void exitGame()
     {
-        Application.Quit();
         escaped = false;
         paused = false;
         Time.timeScale = 1;
+        tutorialController.tutored = false;
+        Application.Quit();
+        
     }
 
     public void mainMenu()

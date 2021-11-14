@@ -44,6 +44,7 @@ public class FollowMouse : MonoBehaviour
     }
     public void closeGame()
     {
+        tutorialController.tutored = false;
         Application.Quit();
     }
 }

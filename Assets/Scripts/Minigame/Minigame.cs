@@ -234,21 +234,24 @@ public class Minigame : MonoBehaviour
 
             if (arrowsNum == -1 && lossCounter > 0)
             {
-                GameObject.Find("AudioWin").GetComponent<AudioSource>().Play();
-                GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
-                GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
-                takeItem();
-                // HARDER
-                days += 1;
-                miniGameLength += 1;
-                speed += 0.9f;
-                itemGenerator.speed += 20f;
-                //HARDER
-                StartCoroutine(dialogueLoss());
-                StartCoroutine(delayedSceneLoad(2.5f));
+                StartCoroutine(win());
 
             }
         }
+    }
+
+    IEnumerator win()
+    {
+        GameObject.Find("AudioWin").GetComponent<AudioSource>().Play();
+        GameObject.Find("MiniGameCat").GetComponent<Animator>().enabled = false;
+        StartCoroutine(dialogueLoss());
+        yield return new WaitForSeconds(2f);
+        GameObject.Find("SceneCover").GetComponent<Animator>().SetTrigger("endScene");
+        days += 1;
+        miniGameLength += 1;
+        speed += 0.9f;
+        itemGenerator.speed += 20f;
+        StartCoroutine(delayedSceneLoad(2.5f));
     }
 
     public void gameOver()
@@ -257,7 +260,6 @@ public class Minigame : MonoBehaviour
         {
             GameObject.Find("AudioLoss").GetComponent<AudioSource>().Play();
             arrowsNum = 0;
-            StartCoroutine(dialogue());
             StartCoroutine(destroyItem());
             
         }
@@ -285,6 +287,7 @@ public class Minigame : MonoBehaviour
     IEnumerator destroyItem()
     {
         GameObject.Find("MiniGameCat").GetComponent<Animator>().SetTrigger("catWins");
+        StartCoroutine(dialogue());
         yield return new WaitForSeconds(2f);
         arrowsNum = -1;
         Debug.Log("You lost!");

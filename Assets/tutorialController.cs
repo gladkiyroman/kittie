@@ -18,6 +18,8 @@ public class tutorialController : MonoBehaviour
 
     public GameObject btns;
 
+    public static bool tutored= false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -83,7 +85,7 @@ public class tutorialController : MonoBehaviour
                 cover.SetActive(true);
                 btns.SetActive(false);
                 gameObject.SetActive(false);
-
+                tutored = true;
             }
         }
     }
